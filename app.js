@@ -69,6 +69,3 @@ const response = await mailchimp.lists.addListMember(listId, {
 
 
 
-
-
-
