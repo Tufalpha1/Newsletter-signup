@@ -13,5 +13,15 @@
     "body-parser": "^1.20.0",
     "express": "^4.18.1",
     "request": "^2.88.2"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tufalpha1/Newsletter-signup.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/Tufalpha1/Newsletter-signup/issues"
+  },
+  "homepage": "https://github.com/Tufalpha1/Newsletter-signup#readme"
 }
