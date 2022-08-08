@@ -1,6 +1,7 @@
 //Requiring mailchimp's module
 //For this we need to install the npm module @mailchimp/mailchimp_marketing. To do that we write:
 //npm install @mailchimp/mailchimp_marketing
+require("dotenv").config()
 const mailchimp = require("@mailchimp/mailchimp_marketing");
 //Requiring express and body parser and initializing the constant "app"
 const express = require("express");
@@ -21,9 +22,9 @@ app.get("/", function (req, res) {
 //Setting up MailChimp
 mailchimp.setConfig({
 //*****************************ENTER YOUR API KEY HERE******************************
- apiKey: "e830f67c3a50b433271065b492bdfd81-us11", //disabled api key
+ apiKey: process.env.API_KEY,//disabled api key
 //*****************************ENTER YOUR API KEY PREFIX HERE i.e.THE SERVER******************************
- server: "us11"
+ server: process.env.SERVER
 });
 //As soon as the sign in button is pressed execute this
 app.post("/", function (req,res) {
@@ -32,7 +33,7 @@ const firstName = req.body.fName;
 const secondName = req.body.lName;
 const email = req.body.email;
 //*****************************ENTER YOU LIST ID HERE******************************
-const listId = "15adff8f29";
+const listId = process.env.LIST_ID;
 //Creating an object with the users data
 const subscribingUser = {
  firstName: firstName,
